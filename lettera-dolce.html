@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auguri Zuccherino!</title>
+    <style>
+      @font-face {
+        font-family: 'GreatVibes';
+        src: url('GreatVibes-Regular.ttf');
+      }
+      
+      /* Notepad styles */
+      .notepad {
+        position: relative;
+        width: 80%; /* Adjusted width for a more intimate feel */
+        margin: 150px auto; /* Centered with some breathing room */
+        padding: 20px;
+        background-color: #f7f7f1; /* Soft, creamy background */
+        border: 1px solid #ddd; /* Subtle border */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gentle shadow */
+        transition: height 0.5s ease-in-out;
+      }
+      
+      .notepad.show {
+        height: 400px;
+      }
+      
+      .notepad-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        overflow-y: auto;
+        box-sizing: border-box;
+        font-family: Pacifico, cursive; /* Inherited font family */
+        font-size: 18px; /* Adjusted font size for better readability */
+        line-height: 1.5; /* Improved line spacing */
+        color: #333; /* Darker text color for better contrast */
+      }
+      
+      .notepad-content hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 20px 0;
+      }
+      
+      .notepad-content p {
+        margin-bottom: 20px;
+      }
+      
+      .signature {
+        font-style: italic;
+        color: #666;
+        margin-top: 20px;
+      }
+      
+      /* Button styles */
+      .button {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        background-color: #8bc34a; /* Softer, more muted green */
+        color: #fff;
+        padding: 15px 32px;
+        align-self: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin-top: 30px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        border-radius: 5px; /* Added subtle border radius */
+      }
+      
+      .button:hover {
+        background-color: #689f38; /* Darker green on hover */
+      }
+
+       .notepad-content {
+          font-size: 16px;
+        }
+
+       .notepad-content {
+          font-size: 14px;
+        }
+
+       .button {
+          width: 100%;
+        }
+
+       .header h1 {
+          font-size: 24px;
+        }
+
+       .header {
+          margin: 20px auto;
+          padding: 10px;
+        }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align:center; font-size:large" class="animated-text show">Buon Compleanno Amore💕 +17🥳</h1>
+        </div>
+        <audio class="audio-loop" autoplay>
+            <source src="audio-finale.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="notepad">
+            <div class="notepad-content">
+                <div class="message animated-text">
+                    <strong><p>Per gli altri, oggi è solo un giorno come tanti, ma per me è un giorno speciale, perché oggi è il giorno in cui è nata una persona bellissima e dolce: Zhara.<br><hr>
+                        Da quando ti ho conosciuta, non avrei mai immaginato che saresti diventata una persona così importante nella mia vita. <br><hr> Con il tempo, ho capito che ti amo con tutto il mio cuore. Sei diventata una parte fondamentale della mia vita, e ne sono infinitamente grato.<br><hr>
+                        Non avrei mai pensato di incontrare una persona così dolce, bellissima e affettuosa come te. Sei unica e insostituibile, e non c'è nessuno al mondo che potrebbe mai prendere il tuo posto nel mio cuore.<br><hr>
+                        Buon compleanno amore mio bellissimo! Spero che questo giorno sia meraviglioso e che tu lo possa trascorrere nel miglior modo possibile. <br><hr> Ti amo tantissimo, Zhara. Sei l'unica che ha catturato il mio cuore semplicemente essendo te stessa! <br>
+
+                        Con tutto il mio amore,
+                    </p></strong>
+                    <p class="signature">- Emiliano</p>
+                </div>
+            </div>
+        </div>
+        <button class="button" id="continue-button">CONTINUA</button>
+    </div>
+    <script>
+      const animatedText = document.querySelector('.animated-text');
+      const notepad = document.querySelector('.notepad');
+      const message = document.querySelector('.message');
+      const continueButton = document.querySelector('#continue-button');
+      const audio = document.getElementById('audio-loop');
+  
+      // Hide the notepad and message initially
+      notepad.style.height = '0';
+      message.style.opacity = '0';
+  
+      // Show the notepad and message after 2 seconds
+      setTimeout(() => {
+          notepad.style.height = '400px';
+          message.style.opacity = '1';
+          audio.load(); // Load the audio
+          audio.play(); // Play the audio
+      }, 2000);
+  
+      // Add touchstart event listener to the body
+      document.body.addEventListener('touchstart', () => {
+          audio.load(); // Load the audio
+          audio.play(); // Play the audio
+      });
+  
+      // Add event listener to the continue button
+      continueButton.addEventListener('click', () => {
+          // Make alert
+          alert('Grazie per aver letto il mio messaggio amore, spero ti sia piaciuto Comunque non ho ancora finito, giusto un ultima cosetta per te');
+          // Redirect to another page
+          window.location.href = 'certificato.html';
+      });
+  </script>
+</body>
+</html>

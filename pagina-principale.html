@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(252, 139, 252); /* Sorta di fucsia */
+            padding: 50px;
+            text-align: center;
+          }
+          
+          h1 {
+            font-family: Pacifico, cursive; /* Font femminile?? */
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
+          }
+        
+        button {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-style: italic;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        
+        button.yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        button.yes:hover {
+            background-color: #45a049;
+        }
+        
+        button.no {
+            background-color: #FF3737;
+            color: white;
+        }
+        
+        button.no:hover {
+            background-color: #FF6969;
+        }
+        .audio-loop {
+            display: block;
+        }
+    </style>
+    <title>REGALO VIRTUALE!</title>
+    <script>
+        function handleClick(answer) {
+            if (answer === 'yes') {
+                alert("Grade ❤️");
+                window.location.href = 'lettera-dolce.html';
+            } else {
+                alert("Ok, sti cazzi 💔");
+                window.location.href = 'https://it.bab.la/dizionario/inglese-italiano/fuck-you';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Pronta per vedere la sorpresa?</h1>
+    <button class="yes" onclick="handleClick('yes')">Ovviamente ❤️</button>
+    <button class="no" onclick="handleClick('no')">Non voglio</button>
+    <audio class="audio-loop" loop id="audioElement" loop autoplay>
+        <source src="auguri.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+<script>
+    // Wait for 3 seconds before playing the audio
+    setTimeout(() => {
+        const audioElement = document.getElementById('audioElement');
+        audioElement.play();
+    }, 3000);
+</script>
+</html>
