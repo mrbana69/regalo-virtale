@@ -16,16 +16,32 @@
           body {
             animation: rainbow-animation 5s infinite linear;
           }
+          
+         .button {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+         .button:hover {
+            background-color: #333;
+          }
     </style>
     <script type="text/javascript">
         window.onload = function() {
             setTimeout(function() {
-                window.location.href = "pagina-principale.html";
-            }, 3000); // 5000 milliseconds = 5 seconds
+                document.getElementById("button-container").style.display = "block";
+            }, 3000); // 3000 milliseconds = 3 seconds
         }
     </script>
 </head>
 <body>
     <h1 style="text-align:center; font-family: Pacifico, cursive">Caricamento in corso, attendi!</h1>
+    <div id="button-container" style="display: none; text-align: center; margin-top: 20px;">
+        <button class="button" onclick="window.location.href = 'pagina-principale.html'">CONTINUA</button>
+    </div>
 </body>
 </html>
